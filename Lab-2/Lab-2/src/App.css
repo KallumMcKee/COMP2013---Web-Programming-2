@@ -1,0 +1,92 @@
+:root {
+  --bg: #eaeaea;
+  --text: #222;
+  --muted: #6b7280;
+  --good: #15803d;
+  --bad: #f10d0d;
+  --rule: #87a5da;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial;
+}
+.page {
+  padding: 32px 40px 60px;
+}
+.page__header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+.page__header h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin: 20px 0;
+}
+.rule {
+  height: 8px;
+  background: var(--rule);
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 34px;
+  padding-top: 26px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+}
+.card__img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+.card__country {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 8px 0 2px;
+}
+.card__hotel {
+  font-size: 20px;
+  font-weight: 700;
+  color: #4b5563;
+  margin: 0 0 8px;
+}
+.card__rating {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 4px 0 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.card__rating .star {
+  font-size: 18px;
+}
+.card__rating.good {
+  color: var(--good);
+}
+.card__rating.bad {
+  color: var(--bad);
+}
+.card__price {
+  font-size: 20px;
+  color: var(--muted);
+  margin: 0;
+}
